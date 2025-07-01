@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Home – Accessibility Linter{% endblock %}
+{% block content %}
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <h2>Check Accessibility</h2>
+      <form id="lint-form">
+        <div class="mb-3">
+          <label for="url-input" class="form-label">URL</label>
+          <input type="url"
+                 class="form-control"
+                 id="url-input"
+                 placeholder="https://example.com">
+        </div>
+        <div class="mb-3">
+          <label for="html-input" class="form-label">Or paste HTML</label>
+          <textarea class="form-control" id="html-input" rows="6"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Run Linter</button>
+      </form>
+      <hr>
+      <div id="report" class="mt-4"></div>
+    </div>
+  </div>
+{% endblock %}
